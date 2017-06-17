@@ -1,3 +1,5 @@
+# server.R
+
 library("ggplot2")
 
 function(input, output, session) {
@@ -19,6 +21,7 @@ function(input, output, session) {
         })
     })
     
+    
     observeEvent(input$advanced_settings, {
         showModal(advancedSettingsModal())
     })
@@ -33,6 +36,7 @@ function(input, output, session) {
             )
         )
     })
+    
     
     advanced_settings_rv <- reactiveValues(
         alpha = 0.75,
